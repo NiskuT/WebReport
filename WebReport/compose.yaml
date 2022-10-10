@@ -1,0 +1,8 @@
+api:
+  environment:
+    - HTTP_PORT
+  build: .
+  ports:
+    - ${HTTP_PORT}:3000
+  volumes:
+    - "polaDB:/db"
