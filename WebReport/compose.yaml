@@ -5,9 +5,12 @@ services:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
     ports:
-      - ${HTTP_PORT}:80
+      - ${HTTP_PORT}:8000
       
-  db:
-    image: sqlite3
+  sqlite3:
+    image: keinos/sqlite3
     volumes:
-      - "WebReport:/db"
+      - WebReport:/root/db/
+
+volumes:
+  WebReport:
