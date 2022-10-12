@@ -7,10 +7,14 @@ services:
     ports:
       - ${HTTP_PORT}:8000
       
-  sqlite3:
-    image: keinos/sqlite3
+  db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     volumes:
-      - WebReport:/root/db/
+      - WebReport:/root
 
 volumes:
   WebReport:
