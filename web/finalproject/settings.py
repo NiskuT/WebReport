@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-%=9m#m34w_4mbos_$c)^=!2^$ao2&@#^ve=!ro(z8#)l(%nc4c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'webreport.sandbox.ensea.fr',]
 
 
 # Application definition
