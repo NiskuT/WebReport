@@ -46,8 +46,8 @@ jobs:
         with:
           context: ./web
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ steps.meta-web.outputs.tags }}
+          labels: ${{ steps.meta-web.outputs.labels }}
           
       - name: Extract metadata (tags, labels) for Docker
         id: meta-nginx
@@ -60,5 +60,5 @@ jobs:
         with:
           context: ./nginx
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ steps.meta-nginx.outputs.tags }}
+          labels: ${{ steps.meta-nginx.outputs.labels }}
