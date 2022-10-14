@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%=9m#m34w_4mbos_$c)^=!2^$ao2&@#^ve=!ro(z8#)l(%nc4c'
+SECRET_KEY = 'django-insecure-nn#4&ebg-&ncg3lx_n=^@ink5!7z258(+!5ur@@%okdzb=g(v9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -81,7 +81,7 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = 'tracker.User'
+AUTH_USER_MODEL = "tracker.User"
 
 
 # Password validation
