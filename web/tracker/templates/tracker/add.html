@@ -1,0 +1,43 @@
+{% extends "tracker/layout.html" %}
+
+{% block title %}
+    Add Samples
+{% endblock %}
+
+{% block body %}
+    <main class="container">
+
+        <div class="py-5">
+            <h2>Add Samples</h2>
+        </div>
+
+        <div>
+            <h4 class="form-label">User</h4>
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{user.first_name}} {{user.last_name}}
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{% url 'signout' %}">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+
+        {% if period %}
+        {% else %}
+            <form class="py-5" action="{% url 'add' %}" method="post">
+                {% csrf_token %}
+
+                <h4 class="form-label">Period</h4>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <button type="submit" class="btn btn-primary" style="margin-top: 5px;">Post</button>
+            </form>
+        {% endif %}
+    </main>
+{% endblock %}
